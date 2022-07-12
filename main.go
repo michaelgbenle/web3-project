@@ -45,7 +45,7 @@ if ValidBlock(block, prevBlock){
 	bc.blocks= append(bc.blocks, block)
 }
 }
-func CreateBlock(prevBlock *Block, checkoutItem BookCheckout){
+func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
 
 }
 
