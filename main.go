@@ -5,17 +5,7 @@ import (
 	"net/http"
 )
 
-func main() {
-	r := mux.newRouter()
-	r.HandleFunc("/", GetBlockchain ).Methods("GET")
-	r.HandleFunc("/", WriteBlock ).Methods("POST")
-	r.HandleFunc("/newbook", NewBook ).Methods("POST")
-
-	log.Println("listening on port 2000")
-	log.Fatal(http.ListenAndServe(":2000", r))
-
-}
-
+var Blockchain *Blockchain
 type Block struct {
 
 }
@@ -29,3 +19,16 @@ type BookCheckout struct{
 type Blockchain struct {
 	blocks []*Block
 }
+
+
+func main() {
+	r := mux.newRouter()
+	r.HandleFunc("/", GetBlockchain ).Methods("GET")
+	r.HandleFunc("/", WriteBlock ).Methods("POST")
+	r.HandleFunc("/newbook", NewBook ).Methods("POST")
+
+	log.Println("listening on port 2000")
+	log.Fatal(http.ListenAndServe(":2000", r))
+
+}
+
