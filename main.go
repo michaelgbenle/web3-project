@@ -76,5 +76,6 @@ func GetBlockchain (w http.ResponseWriter, r *http.Request){
 
 }
 func WriteBlock (w http.ResponseWriter, r *http.Request){
+var checkoutItem BookCheckout
 
 }
