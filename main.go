@@ -101,7 +101,7 @@ func NewBlockchain() *Blockchain  {
 }
 
 func main() {
-	Blockchain = NewBlockchain()
+	BlockChain = NewBlockchain()
 	r := mux.NewRouter()
 	r.HandleFunc("/", GetBlockchain ).Methods("GET")
 	r.HandleFunc("/", WriteBlock ).Methods("POST")
@@ -153,6 +153,6 @@ if err:= json.NewDecoder(r.Body).Decode(&checkoutItem); err != nil{
 	w.Write([]byte("could not write block"))
 	return
 }
-Blockchain.AddBlock(checkoutItem)
+BlockChain.AddBlock(checkoutItem)
 
 }
