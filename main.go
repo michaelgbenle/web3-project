@@ -108,8 +108,8 @@ func main() {
 	r.HandleFunc("/newbook", NewBook ).Methods("POST")
 
 	go func() {
-		range Blockchain.Blocks {
-			
+		for _,block := range Blockchain.Blocks {
+
 		}
 	}
 
