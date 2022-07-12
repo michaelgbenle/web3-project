@@ -68,6 +68,10 @@ block.generateHash()
 return block
 }
 
+func GenesisBlock() *Block  {
+	
+}
+
 func NewBlockchain() *Blockchain  {
 	return &Blockchain{[]*Block{GenesisBlock()}}
 }
