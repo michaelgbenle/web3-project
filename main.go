@@ -64,7 +64,10 @@ func ValidBlock(block, prevBlock *Block) bool {
 	if prevBlock.Hash !=  block.PrevHash {
 		return false
 	}
-	if !block.ValidateHash(block.Hash)
+	if !block.ValidateHash(block.Hash) {
+		return false
+	}
+	
 
 }
 
