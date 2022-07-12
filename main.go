@@ -37,7 +37,7 @@ type Blockchain struct {
 
 
 func main() {
-	r := mux.newRouter()
+	r := mux.NewRouter()
 	r.HandleFunc("/", GetBlockchain ).Methods("GET")
 	r.HandleFunc("/", WriteBlock ).Methods("POST")
 	r.HandleFunc("/newbook", NewBook ).Methods("POST")
@@ -47,3 +47,6 @@ func main() {
 
 }
 
+func NewBook (w http.ResponseWriter, r *http.Request){
+
+}
