@@ -7,7 +7,10 @@ import (
 
 var Blockchain *Blockchain
 type Block struct {
-
+Position
+TimeStamp
+Hash
+PrevHash
 }
 type Book struct {
 ID 			string `json: "id"`
