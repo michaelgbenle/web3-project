@@ -20,5 +20,9 @@ type Block struct {
 
 }
 type Book struct {
+
+}
+
+type BookCheckout struct{
 	
 }
