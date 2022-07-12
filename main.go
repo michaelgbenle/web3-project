@@ -27,5 +27,5 @@ type BookCheckout struct{
 
 }
 type Blockchain struct {
-	
+	blocks []*Block
 }
