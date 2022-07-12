@@ -148,7 +148,9 @@ func GetBlockchain (w http.ResponseWriter, r *http.Request){
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		json.NewEncoder(w).Encode(err)
+		return
 	}
+	io.WriteString(w, string(jbytes))
 }
 func WriteBlock (w http.ResponseWriter, r *http.Request){
 var checkoutItem BookCheckout
