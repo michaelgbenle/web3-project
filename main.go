@@ -81,7 +81,7 @@ func ValidBlock(block, prevBlock *Block) bool {
 return true
 }
 
-func
+
 
 func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
 block := &Block{}
@@ -106,6 +106,10 @@ func main() {
 	r.HandleFunc("/", GetBlockchain ).Methods("GET")
 	r.HandleFunc("/", WriteBlock ).Methods("POST")
 	r.HandleFunc("/newbook", NewBook ).Methods("POST")
+
+	go func() {
+
+	}
 
 	log.Println("listening on port 2000")
 	log.Fatal(http.ListenAndServe(":2000", r))
