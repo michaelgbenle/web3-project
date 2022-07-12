@@ -68,7 +68,7 @@ func ValidBlock(block, prevBlock *Block) bool {
 		return false
 	}
 	if prevBlock.Position + 1 != block.Position {
-		
+		return false
 	}
 
 }
