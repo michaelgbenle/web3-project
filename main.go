@@ -14,7 +14,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var Blockchain *Blockchain
+var BlockChain *Blockchain
 type Block struct {
 Position 	int
 Data		BookCheckout
@@ -108,7 +108,7 @@ func main() {
 	r.HandleFunc("/newbook", NewBook ).Methods("POST")
 
 	go func() {
-		for _,block := range Blockchain.Blocks {
+		for _,block := range Blockchain.blocks {
 				fmt.Printf("prev.hash :%x\n", block.prevHash)
 				bytes,_:=json.MarshalIndent(block.data,""," ")
 				fmt.Printf("Data:%v\n", string(bytes))
