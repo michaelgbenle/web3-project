@@ -47,6 +47,7 @@ if ValidBlock(block, prevBlock){
 }
 func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
 block := &Block{}
+block.Position =
 }
 
 
