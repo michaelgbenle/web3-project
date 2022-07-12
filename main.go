@@ -69,7 +69,7 @@ return block
 }
 
 func NewBlockchain() *Blockchain  {
-	return &Blockchain{}
+	return &Blockchain{[]*Block{}}
 }
 
 func main() {
