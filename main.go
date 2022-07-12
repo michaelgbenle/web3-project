@@ -10,8 +10,11 @@ type Block struct {
 
 }
 type Book struct {
-ID string
-Title string
+ID 			string `json: "id"`
+Title 		string
+Author	 	string
+PublishDate string
+Isbn 		string
 
 }
 
