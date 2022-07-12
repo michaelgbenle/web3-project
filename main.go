@@ -67,7 +67,7 @@ func ValidBlock(block, prevBlock *Block) bool {
 	if !block.ValidateHash(block.Hash) {
 		return false
 	}
-	
+	if prevBlock.Position + 1 
 
 }
 
