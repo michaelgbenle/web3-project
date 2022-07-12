@@ -111,6 +111,7 @@ func main() {
 		for _,block := range Blockchain.Blocks {
 				fmt.Printf("prev.hash :%x\n", block.prevHash)
 				bytes,_:=json.MarshalIndent(block.data,""," ")
+				fmt.Printf("%+v\n", fmt)
 		}
 	}
 
