@@ -80,7 +80,7 @@ var checkoutItem BookCheckout
 if err:= json.NewDecoder(r.Body).Decode(&checkoutItem); err != nil{
 	w.WriteHeader(http.StatusInternalServerError)
 	w.Write([]byte("could not write block"))
-
+	return
 }
 
 }
