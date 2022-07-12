@@ -33,9 +33,11 @@ func (b *Block) generateHash()  {
 
 }
 
-func (b *Block) ValidateHash() bool {
-
-	
+func (b *Block) ValidateHash(hash string) bool {
+b.generateHash()
+if b.Hash != hash {
+	return false
+}
 }
 
 type Book struct {
