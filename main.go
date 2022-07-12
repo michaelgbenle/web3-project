@@ -53,7 +53,7 @@ func main() {
 
 func NewBook (w http.ResponseWriter, r *http.Request){
 	var book Book
-	if err:= json.NewDecoder(r.Body).Decode(book); err != nil{
+	if err:= json.NewDecoder(r.Body).Decode(&book); err != nil{
 		w.WriteHeader(http.StatusInternalServerError)
 		w.Write([]byte("could not bind json"))
 		return
@@ -77,6 +77,6 @@ func GetBlockchain (w http.ResponseWriter, r *http.Request){
 }
 func WriteBlock (w http.ResponseWriter, r *http.Request){
 var checkoutItem BookCheckout
-if err:= json.NewDecoder(r.Body).Decode(checkoutItem)
+if err:= json.NewDecoder(r.Body).Decode(&checkoutItem)
 
 }
