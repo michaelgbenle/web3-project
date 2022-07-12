@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/gorilla/mux"
+	"encoding/json"
 	"log"
 	"net/http"
 
+	"github.com/gorilla/mux"
 )
 
 var Blockchain *Blockchain
@@ -48,5 +49,13 @@ func main() {
 }
 
 func NewBook (w http.ResponseWriter, r *http.Request){
+	var book Book
+	if err:= json.NewDecoder(r.Body).Decode(book)
+
+}
+func GetBlockchain (w http.ResponseWriter, r *http.Request){
+
+}
+func WriteBlock (w http.ResponseWriter, r *http.Request){
 
 }
