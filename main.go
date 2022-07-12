@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/md5"
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -59,6 +60,7 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 	}
 	h:=  md5.New()
 	io.WriteString(h, book.Isbn + book.PublishDate)
+	book.ID = fmt.Sprintf("%x", h.Sum(nil))
 
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
