@@ -17,5 +17,8 @@ func main() {
 }
 
 type Block struct {
+
+}
+type Book struct {
 	
 }
