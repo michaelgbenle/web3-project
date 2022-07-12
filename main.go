@@ -40,6 +40,7 @@ type Blockchain struct {
 }
 func (bc *Blockchain)AddBlock(data BookCheckout)  {
 prevBlock := 	bc.blocks[len(bc.blocks)-1]
+block := 
 }
 
 
