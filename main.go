@@ -113,8 +113,9 @@ func main() {
 				bytes,_:=json.MarshalIndent(block.data,""," ")
 				fmt.Printf("Data:%v\n", string(bytes))
 				fmt.Printf("Hash:%x\n", block.Hash)
+				fmt.Println()
 		}
-	}
+	}()
 
 	log.Println("listening on port 2000")
 	log.Fatal(http.ListenAndServe(":2000", r))
