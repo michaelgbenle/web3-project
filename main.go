@@ -1,6 +1,9 @@
 package main
 
-import "log"
+import (
+	"log"
+	"net/http"
+)
 
 func main() {
 	r := mux.newRouter()
@@ -9,5 +12,6 @@ func main() {
 	r.HandleFunc("/", NewBook ).Methods("POST")
 
 	log.Println("listening on port 2000")
+	log.Fatal(http.ListenAndServe(":2000", r))
 
 }
