@@ -1,7 +1,9 @@
 package main
 
 import (
+	"crypto/md5"
 	"encoding/json"
+	"io"
 	"log"
 	"net/http"
 
@@ -55,6 +57,8 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 		w.Write([]byte("could not bind json"))
 		return
 	}
+	h:=  md5.New()
+	io.WriteString(h, book.Isbn)
 
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
