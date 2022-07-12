@@ -33,6 +33,8 @@ func (b *Block) generateHash()  {
 
 }
 
+func (b *Block) ValidateHash()  {}
+
 type Book struct {
 ID 			string `json: "id"`
 Title 		string	`json: "title"`
@@ -70,8 +72,10 @@ func ValidBlock(block, prevBlock *Block) bool {
 	if prevBlock.Position + 1 != block.Position {
 		return false
 	}
-
+return true
 }
+
+func
 
 func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
 block := &Block{}
