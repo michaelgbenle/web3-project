@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/md5"
+	"crypto/sha256"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -24,6 +25,8 @@ func (b *Block) generateHash()  {
 	bytes,_ := json.Marshal(b.Data)
 
 	data := string(b.Position) + b.TimeStamp + string(bytes) + b.PrevHash
+
+	hash := sha256
 
 }
 
