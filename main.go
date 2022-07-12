@@ -62,6 +62,12 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 	io.WriteString(h, book.Isbn + book.PublishDate)
 	book.ID = fmt.Sprintf("%x", h.Sum(nil))
 
+	json.MarshalIndent(book,"", " ")
+	if err!= nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		
+	}
+
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
 
