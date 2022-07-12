@@ -7,6 +7,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/gorilla/mux"
 )
@@ -48,7 +49,7 @@ if ValidBlock(block, prevBlock){
 func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
 block := &Block{}
 block.Position = prevBlock.Position + 1
-block.TimeStamp = Time.Now()
+block.TimeStamp = time.Now().String()
 block.PrevHash = prevBlock.Hash
 }
 
