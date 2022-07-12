@@ -11,7 +11,7 @@ type Block struct {
 }
 type Book struct {
 ID 			string `json: "id"`
-Title 		string
+Title 		string	`json: "id"`
 Author	 	string
 PublishDate string
 Isbn 		string
