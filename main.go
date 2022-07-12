@@ -38,6 +38,7 @@ b.generateHash()
 if b.Hash != hash {
 	return false
 }
+return true
 }
 
 type Book struct {
