@@ -20,6 +20,10 @@ TimeStamp	string
 Hash		string
 PrevHash	string
 }
+func (b *Block) generateHash()  {
+	
+}
+
 type Book struct {
 ID 			string `json: "id"`
 Title 		string	`json: "title"`
