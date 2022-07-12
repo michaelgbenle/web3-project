@@ -58,7 +58,7 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 		return
 	}
 	h:=  md5.New()
-	io.WriteString(h, book.Isbn)
+	io.WriteString(h, book.Isbn + book.PublishDate)
 
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
