@@ -68,6 +68,9 @@ block.generateHash()
 return block
 }
 
+func NewBlockchain() *Blockchain  {
+	
+}
 
 func main() {
 	Blockchain = NewBlockchain()
