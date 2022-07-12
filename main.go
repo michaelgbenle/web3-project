@@ -50,7 +50,9 @@ func main() {
 
 func NewBook (w http.ResponseWriter, r *http.Request){
 	var book Book
-	if err:= json.NewDecoder(r.Body).Decode(book)
+	if err:= json.NewDecoder(r.Body).Decode(book); err != nil{
+		
+	}
 
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
