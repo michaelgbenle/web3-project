@@ -33,7 +33,10 @@ func (b *Block) generateHash()  {
 
 }
 
-func (b *Block) ValidateHash()  {}
+func (b *Block) ValidateHash() bool {
+
+	
+}
 
 type Book struct {
 ID 			string `json: "id"`
