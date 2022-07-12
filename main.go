@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+import "log"
 
 func main() {
 	r := mux.newRouter()
@@ -8,6 +8,6 @@ func main() {
 	r.HandleFunc("/", WriteBlock ).Methods("POST")
 	r.HandleFunc("/", NewBook ).Methods("POST")
 
-	fmt.Println("connecting to server")
+	log.Println("listening on port 2000")
 
 }
