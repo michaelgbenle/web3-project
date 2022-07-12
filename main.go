@@ -8,6 +8,6 @@ func main() {
 	r.HandleFunc("/", WriteBlock ).Methods("POST")
 	r.HandleFunc("/", NewBook ).Methods("POST")
 
-	fmt.Println("connectring to server")
+	fmt.Println("connecting to server")
 
 }
