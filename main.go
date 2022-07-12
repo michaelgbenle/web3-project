@@ -68,7 +68,8 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 		w.Write([]byte("could not save book data"))
 		return
 	}
-	
+	w.WriteHeader(http.StatusOK)
+	w.Write(response)
 
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
