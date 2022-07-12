@@ -15,3 +15,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":2000", r))
 
 }
+
+type Block struct {
+	
+}
