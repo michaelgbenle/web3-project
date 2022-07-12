@@ -147,7 +147,7 @@ func GetBlockchain (w http.ResponseWriter, r *http.Request){
 	jbytes,err:= json.MarshalIndent(BlockChain.blocks,""," ")
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		json.NewEncoder().Encode()
+		json.NewEncoder(w).Encode(err)
 	}
 }
 func WriteBlock (w http.ResponseWriter, r *http.Request){
