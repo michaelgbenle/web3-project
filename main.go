@@ -108,9 +108,9 @@ func main() {
 	r.HandleFunc("/newbook", NewBook ).Methods("POST")
 
 	go func() {
-		for _,block := range Blockchain.blocks {
-				fmt.Printf("prev.hash :%x\n", block.prevHash)
-				bytes,_:=json.MarshalIndent(block.data,""," ")
+		for _,block := range BlockChain.blocks {
+				fmt.Printf("prev.hash :%x\n", block.PrevHash)
+				bytes,_:=json.MarshalIndent(block.Data,""," ")
 				fmt.Printf("Data:%v\n", string(bytes))
 				fmt.Printf("Hash:%x\n", block.Hash)
 				fmt.Println()
@@ -144,7 +144,7 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
-
+json.MarshalIndent(Blockchain.blocks,""," ")
 }
 func WriteBlock (w http.ResponseWriter, r *http.Request){
 var checkoutItem BookCheckout
