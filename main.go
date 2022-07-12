@@ -22,6 +22,9 @@ PrevHash	string
 }
 func (b *Block) generateHash()  {
 	bytes,_ := json.Marshal(b.Data)
+
+	data := string(b.Position)
+	
 }
 
 type Book struct {
