@@ -70,6 +70,7 @@ return block
 
 
 func main() {
+	Blockchain = NewBlockchain()
 	r := mux.NewRouter()
 	r.HandleFunc("/", GetBlockchain ).Methods("GET")
 	r.HandleFunc("/", WriteBlock ).Methods("POST")
