@@ -26,7 +26,7 @@ func (b *Block) generateHash()  {
 
 	data := string(b.Position) + b.TimeStamp + string(bytes) + b.PrevHash
 
-	hash := sha256
+	hash := sha256.New()
 
 }
 
