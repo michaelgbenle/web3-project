@@ -69,7 +69,7 @@ return block
 }
 
 func GenesisBlock() *Block  {
-	
+	return CreateBlock(&Block{})
 }
 
 func NewBlockchain() *Blockchain  {
