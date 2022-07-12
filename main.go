@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	r := mux.newRouter()
-	r.HandleFunc
+	r.HandleFunc("/", ).methodpost
 	fmt.Println("connectring to server")
 
 }
