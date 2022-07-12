@@ -10,6 +10,8 @@ type Block struct {
 
 }
 type Book struct {
+ID string
+Title string
 
 }
 
