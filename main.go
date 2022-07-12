@@ -82,5 +82,6 @@ if err:= json.NewDecoder(r.Body).Decode(&checkoutItem); err != nil{
 	w.Write([]byte("could not write block"))
 	return
 }
+Blockchain.AddBlock(checkoutItem)
 
 }
