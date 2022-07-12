@@ -79,7 +79,7 @@ func WriteBlock (w http.ResponseWriter, r *http.Request){
 var checkoutItem BookCheckout
 if err:= json.NewDecoder(r.Body).Decode(&checkoutItem); err != nil{
 	w.WriteHeader(http.StatusInternalServerError)
-	w.Write([]byte(""))
+	w.Write([]byte("could not write block"))
 
 }
 
