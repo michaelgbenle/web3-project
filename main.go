@@ -145,7 +145,9 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
 	jbytes,err:= json.MarshalIndent(BlockChain.blocks,""," ")
-	
+	if err !+ nil {
+		w.WriteHeader(http.StatusInternalServerError)
+	}
 }
 func WriteBlock (w http.ResponseWriter, r *http.Request){
 var checkoutItem BookCheckout
