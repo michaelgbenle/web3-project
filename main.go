@@ -108,7 +108,9 @@ func main() {
 	r.HandleFunc("/newbook", NewBook ).Methods("POST")
 
 	go func() {
-
+		range Blockchain.Blocks {
+			
+		}
 	}
 
 	log.Println("listening on port 2000")
