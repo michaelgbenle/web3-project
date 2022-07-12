@@ -24,5 +24,8 @@ type Book struct {
 }
 
 type BookCheckout struct{
+
+}
+type Blockchain struct {
 	
 }
