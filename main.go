@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/md5"
 	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -27,6 +28,8 @@ func (b *Block) generateHash()  {
 	data := string(b.Position) + b.TimeStamp + string(bytes) + b.PrevHash
 
 	hash := sha256.New()
+
+	b.Hash = hex.EncodeToString(hash.Sum(nil))
 
 }
 
