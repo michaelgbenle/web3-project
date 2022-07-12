@@ -28,7 +28,7 @@ func (b *Block) generateHash()  {
 	data := string(b.Position) + b.TimeStamp + string(bytes) + b.PrevHash
 
 	hash := sha256.New()
-
+	hash.Write([]byte(data))
 	b.Hash = hex.EncodeToString(hash.Sum(nil))
 
 }
