@@ -60,7 +60,7 @@ if ValidBlock(block, prevBlock){
 }
 }
 
-func ValidBlock()  {
+func ValidBlock(block, prevBlock *Block)  {
 	
 }
 
