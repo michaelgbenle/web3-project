@@ -52,6 +52,7 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 	var book Book
 	if err:= json.NewDecoder(r.Body).Decode(book); err != nil{
 		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte("could not bind json"))
 	}
 
 }
