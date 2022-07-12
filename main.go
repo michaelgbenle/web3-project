@@ -62,8 +62,9 @@ if ValidBlock(block, prevBlock){
 
 func ValidBlock(block, prevBlock *Block) bool {
 	if prevBlock.Hash !=  block.PrevHash {
-		
+		return false
 	}
+	
 }
 
 func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
