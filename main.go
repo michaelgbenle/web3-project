@@ -59,6 +59,11 @@ if ValidBlock(block, prevBlock){
 	bc.blocks= append(bc.blocks, block)
 }
 }
+
+func ValidBlock()  {
+	
+}
+
 func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
 block := &Block{}
 block.Position = prevBlock.Position + 1
