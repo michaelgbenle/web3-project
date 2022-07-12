@@ -52,6 +52,7 @@ block.Position = prevBlock.Position + 1
 block.TimeStamp = time.Now().String()
 block.PrevHash = prevBlock.Hash
 block.generateHash()
+return block
 }
 
 
