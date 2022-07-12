@@ -19,6 +19,10 @@ Isbn 		string	`json: "isbn"`
 }
 
 type BookCheckout struct{
+	BookId 			string
+	User			string
+	CheckoutDate 	string
+	IsGenesis 		bool
 
 }
 type Blockchain struct {
