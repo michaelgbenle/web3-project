@@ -38,7 +38,7 @@ type BookCheckout struct{
 type Blockchain struct {
 	blocks []*Block
 }
-func (bc *Blockchain)AddBlock()  {
+func (bc *Blockchain)AddBlock(data BookCheckout)  {
 	
 }
 
