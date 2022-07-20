@@ -165,7 +165,7 @@ BlockChain.AddBlock(checkoutItem)
 resp,err := json.MarshalIndent(checkoutItem,""," ")
 if err != nil {
 	w.WriteHeader(http.StatusInternalServerError)
-	w.Write([]bytes)
+	w.Write([]byte(""))
 }
 
 }
