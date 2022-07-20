@@ -61,7 +61,7 @@ type Blockchain struct {
 	blocks []*Block
 }
 func (bc *Blockchain)AddBlock(data BookCheckout)  {
-prevBlock := 	bc.blocks[len(bc.blocks)-1]
+prevBlock := bc.blocks[len(bc.blocks)-1]
 block := CreateBlock(prevBlock, data)
 if ValidBlock(block, prevBlock){
 	bc.blocks= append(bc.blocks, block)
@@ -142,7 +142,6 @@ func NewBook (w http.ResponseWriter, r *http.Request){
 	}
 	w.WriteHeader(http.StatusOK)
 	w.Write(response)
-
 }
 func GetBlockchain (w http.ResponseWriter, r *http.Request){
 	jbytes,err:= json.MarshalIndent(BlockChain.blocks,""," ")
