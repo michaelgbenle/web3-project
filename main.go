@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"crypto/md5"
 	"crypto/sha256"
 	"encoding/hex"
@@ -164,7 +165,7 @@ BlockChain.AddBlock(checkoutItem)
 resp,err := json.MarshalIndent(checkoutItem,""," ")
 if err != nil {
 	w.WriteHeader(http.StatusInternalServerError)
-	
+	w.Write([]bytes)
 }
 
 }
