@@ -47,7 +47,6 @@ Title 		string	`json: "title"`
 Author	 	string	`json: "author"`
 PublishDate string	`json: "publish_date"`
 Isbn 		string	`json: "isbn"`
-
 }
 
 type BookCheckout struct{
