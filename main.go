@@ -166,6 +166,7 @@ resp,err := json.MarshalIndent(checkoutItem,""," ")
 if err != nil {
 	w.WriteHeader(http.StatusInternalServerError)
 	w.Write([]byte("could not write block"))
+	return
 }
 
 }
