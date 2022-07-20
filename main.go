@@ -65,7 +65,7 @@ prevBlock := 	bc.blocks[len(bc.blocks)-1]
 block := CreateBlock(prevBlock, data)
 if ValidBlock(block, prevBlock){
 	bc.blocks= append(bc.blocks, block)
-}
+	}
 }
 
 func ValidBlock(block, prevBlock *Block) bool {
@@ -87,6 +87,7 @@ func CreateBlock(prevBlock *Block, checkoutItem BookCheckout) *Block{
 block := &Block{}
 block.Position = prevBlock.Position + 1
 block.TimeStamp = time.Now().String()
+
 block.PrevHash = prevBlock.Hash
 block.generateHash()
 return block
@@ -152,7 +153,7 @@ func GetBlockchain (w http.ResponseWriter, r *http.Request){
 	}
 	io.WriteString(w, string(jbytes))
 }
-func WriteBlock (w http.ResponseWriter, r *http.Request){
+func  WriteBlock (w http.ResponseWriter, r *http.Request){
 var checkoutItem BookCheckout
 if err:= json.NewDecoder(r.Body).Decode(&checkoutItem); err != nil{
 	w.WriteHeader(http.StatusInternalServerError)
