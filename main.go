@@ -162,6 +162,9 @@ if err:= json.NewDecoder(r.Body).Decode(&checkoutItem); err != nil{
 }
 BlockChain.AddBlock(checkoutItem)
 resp,err := json.MarshalIndent(checkoutItem,""," ")
-
+if err != nil {
+	w.WriteHeader(http.StatusInternalServerError)
+	
+}
 
 }
